@@ -1,58 +1,23 @@
 import React, { useContext, useEffect, useRef, useState } from "react";
-import { RiCloseFill, RiStarSFill, RiStarSLine } from "react-icons/ri";
-import styled from "styled-components";
-import useOutsideClick from "../hooks/useOutsideClick";
-
-import moment from "moment";
 import { TaskContext } from "../contexts/TaskContext";
-
-const Checkbox = styled.input`
-  margin: 1rem;
-`;
-
-const TaskContainer = styled.div`
-  height: auto;
-  width: auto;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  border: 0.1rem solid #f1f1f1;
-  border-radius: 0.5rem;
-  background-color: #efefef;
-  margin: 1.5rem 3rem;
-  padding: 0.1rem;
-  position: relative;
-`;
-
-const OptionContainer = styled.button`
-  position: absolute;
-  right: 1rem;
-  display: flex;
-`;
-
-const EditInput = styled.input`
-  background-color: #efefef;
-  width: 100%;
-  &:focus {
-    outline: none;
-  }
-`;
-
-const TaskTitleContainer = styled.div`
-  width: 70%;
-`;
-
-const DaysContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  font-size: 0.6em;
-`;
+import useOutsideClick from "../hooks/useOutsideClick";
+import moment from "moment";
+import { RiCloseFill, RiStarSFill, RiStarSLine } from "react-icons/ri";
+import {
+  Checkbox,
+  DaysContainer,
+  EditInput,
+  OptionContainer,
+  TaskContainer,
+  TaskTitleContainer,
+} from "../pages/styles";
 
 const Task = ({ task }) => {
-  const { completeTask, removeTask, toggleStar, editTask, todayDate } =
+  const { completeTask, removeTask, toggleStar, editTask } =
     useContext(TaskContext);
   const [isEdit, setIsEdit] = useState(false);
   const [edit, setEdit] = useState(task.title);
+
   const handleEdit = (e) => {
     setEdit(e.target.value);
   };

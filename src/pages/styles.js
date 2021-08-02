@@ -120,3 +120,47 @@ export const TaskInputContainer = styled.form`
   bottom: 0;
   padding: 1rem 2rem;
 `;
+
+//Task.js
+
+export const Checkbox = styled.input`
+  margin: 1rem;
+`;
+
+export const TaskContainer = styled.div`
+  height: auto;
+  width: auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border: 0.1rem solid #f1f1f1;
+  border-radius: 0.5rem;
+  background-color: #efefef;
+  margin: 1.5rem 3rem;
+  padding: 0.1rem;
+  position: relative;
+`;
+
+export const OptionContainer = styled.button`
+  position: absolute;
+  right: 1rem;
+  display: flex;
+`;
+
+export const EditInput = styled.input`
+  background-color: #efefef;
+  width: 100%;
+  &:focus {
+    outline: none;
+  }
+`;
+
+export const TaskTitleContainer = styled.div`
+  width: 70%;
+`;
+
+export const DaysContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  font-size: 0.6em;
+`;
