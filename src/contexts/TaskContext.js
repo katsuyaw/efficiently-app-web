@@ -161,6 +161,8 @@ export const TaskContextProvider = ({ children }) => {
       console.log("Error getting document:", error);
     });
 
+  console.log("Initial theme is: ", initialTheme);
+
   const [theme, setTheme] = useState(initialTheme);
   const [input, setInput] = useState("");
   const [dark, setDark] = useState(false);
@@ -169,6 +171,7 @@ export const TaskContextProvider = ({ children }) => {
   const handleTheme = (color) => {
     setTheme(color);
     updateTheme(color);
+    // should post to firebase here?
   };
 
   return (

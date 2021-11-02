@@ -17,7 +17,10 @@ const TaskContainer = styled.div`
   }
 `;
 const Checkbox = styled.input`
-  margin: 0 0.5rem;
+  margin: 0 1rem;
+  height: 1rem;
+  width: 1rem;
+  background-color: #eee;
 `;
 
 const TaskNameContainer = styled.div`
